@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/57b9b4adde.js" crossorigin="anonymous"></script>
+
+  <style>
+
+
+        :root {
+        --hovercolor :rgb(255, 0, 0);
+      }
+       .fa-customize{
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+.fa-customize:hover{
+   color: red;
+}
+  </style>
+      
+    <script>
+        function hoverit(x){
+            document.querySelector(':root').style.setProperty('--hovercolor', x);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Dry Snacks Menu</title>
+    <style>
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(146, 121, 121, 0); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6394F8; 
+}
+
+
+      .flexkacontainer { display: flex; 
+       flex-direction: row;
+       justify-content: space-around;
+       margin: 10px;}
+
+     
+
+       @media (max-width: 930px) {
+nav{
+  padding:50px;
+ 
+}
+
+
+  .flexkacontainer {
+    flex-direction: column;
+   margin: 10px;
+   justify-content: space-around;
+    align-items: center;
+  justify-content: center;
+  }
+}
+#lovetoz{
+  padding: 10px 10px ;
+}
+#lovetoz li{
+  list-style: none;
+  padding: 10px 10px 10px 1px ;
+}
+
+.image1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+#dropdownbut  :hover{
+background-color:#6394F8;
+border-color: #6394F8;
+}
+
+.card{
+    margin: 5px;
+
+}
+.nav-link{
+    text-shadow: 5px 1px 4px white;
+}
+
+.scrollablelist{
+  height: 250px;
+
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#lovetoz > li {
+  color: #0074D9;
+}
+
+.card:hover{
+    box-shadow: 0px 1px 7px 2px var(--hovercolor);
+}
+#checkoutbutton{
+    border: 0;
+height: 40px;
+z-index: 1;
+padding: 0 50px;
+border-radius: 20px;
+background-color: #6394F8;color: white;
+}
+#badge {
+    background-color: #6394F8;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+body{
+  background: url("dryBg.png");
+  background-size: cover;
+}
+
+    </style>
+   
+</head>
+
+<body style="background-color: #FFFDD0">
+    <nav id="navbar" style="
+  
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;" class="navbar navbar-expand-lg navbar-light ">
+     <a href="secondPage.html">  <i class="fas fa-home fa-customize"></i> </a>
+        <a  style="font-weight: 900; font-size: large;color: black;" class="navbar-brand" href="/">
+            <h1 style=" font-weight: 700; color: chocolate; font-family: Times New Roman;" >Dry Snacks Menu</h1> 
+        
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+     
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" style="font-size: larger;font-weight: 700; color: chocolate; " href="/">Total: ₹<span id="jj">0</span> <span class="sr-only">(current)</span></a>
+            </li>
+           
+            <li class="nav-item active">
+                <a class="nav-link" style="font-size: larger;font-weight: 700; color: chocolate; " onclick=""><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                </svg>Quantity <span id="badge">0</span></a>
+              </li>
+
+              <div class="dropdown" style="margin-right: 80px;">
+             
+                <button
+                id='dropdownbut' style="background-color:#6394F8;border-color: #6394F8;"
+                class="btn btn-secondary dropdown-toggle" style="margin-right: 70px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Checkout
+                </button>
+             
+                <div style="width: 200px;" id="Done" class="dropdown-menu scrollablelist" aria-labelledby="dropdownMenuButton">
+                  <li id="cardisempty" style="margin: 10px;color: #0074D9;">Please add items, Your cart is empty</li>
+                  <ul id='lovetoz' style="position:relative">
+               
+                  <button type="button" data-toggle="modal" data-target="#exampleModal"  id='checkoutbutton' style="cursor: pointer;">
+                             Checkout
+                      </button>
+                  </ul>
+                 
+                 
+                </div>
+              </div>
+    
+          </ul>
+    
+        </div>
+      </nav>
+
+
+
+<section >
+
+   <div class="flexkacontainer" >
+      
+        <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Chips.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Chips</h5>
+            <p class="card-text">Price: ₹ 25</p>
+            <a  class="btn btn-primary"  onclick="addtocart(25,0)">Add to Cart</a>
+            
+            <a class="btn btn-success"  onclick="removefromcart(25,0)">Remove </a>
+
+        </div>
+        </div>
+
+
+        <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Chulbule.png" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Chulbule</h5>
+            <p class="card-text">Price: ₹ 25</p>
+            <a class="btn btn-primary"  onclick="addtocart(25,1)">Add to Cart</a>
+            <a class="btn btn-success"  onclick="removefromcart(25,1)">Remove </a>
+        </div>
+        </div>
+
+        <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Cold Drink.jpg" alt="Card image cap">  
+            <div class="card-body">
+            <h5 class="card-title">Cold Drink</h5>
+            <p class="card-text">Price: ₹ 35</p>
+         <a  class="btn btn-primary" onclick="addtocart(35,2)">Add to cart</a> 
+         
+         <a class="btn btn-success"  onclick="removefromcart(35,2)">Remove </a>
+        </div>  
+        </div>
+
+       
+   
+</div>
+
+</section>
+
+<section>
+    <div class="flexkacontainer">
+       <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Milk.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Milk</h5>
+            <p class="card-text">Price: ₹ 30</p>
+            <a  class="btn btn-primary"  onclick="addtocart(30,3)">Add to Cart</a>
+            
+            <a class="btn btn-success"  onclick="removefromcart(30,3)">Remove </a>
+
+        </div>
+        </div>
+
+        <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Dahi.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Curd</h5>
+            <p class="card-text">Price: ₹ 10</p>
+            <a  class="btn btn-primary"  onclick="addtocart(10,4)">Add to Cart</a>
+            
+            <a class="btn btn-success"  onclick="removefromcart(10,4)">Remove </a>
+
+        </div>
+        </div>
+
+        <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Biscuit.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Biscuit</h5>
+            <p class="card-text">Price: ₹ 20</p>
+            <a  class="btn btn-primary"  onclick="addtocart(20,5)">Add to Cart</a>
+            
+            <a class="btn btn-success"  onclick="removefromcart(20,5)">Remove </a>
+
+        </div>
+        </div>
+
+       
+    </div>
+</section>
+
+<section>
+  <div class="flexkacontainer">
+     <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Bar One.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">BarOne</h5>
+            <p class="card-text">Price: ₹ 10</p>
+            <a  class="btn btn-primary"  onclick="addtocart(10,6)">Add to Cart</a>
+            
+            <a class="btn btn-success"  onclick="removefromcart(10,6)">Remove </a>
+
+        </div>
+        </div>
+
+        <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Coffee.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Coffee</h5>
+            <p class="card-text">Price: ₹ 10</p>
+            <a  class="btn btn-primary"  onclick="addtocart(10,7)">Add to Cart</a>
+            
+            <a class="btn btn-success"  onclick="removefromcart(10,7)">Remove </a>
+
+        </div>
+        </div>
+
+          <div onmouseover="hoverit('red')" class="card" style="width: 18rem;">
+            <img class="card-img-top" src="Chai.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Tea</h5>
+            <p class="card-text">Price: ₹ 10</p>
+            <a  class="btn btn-primary"  onclick="addtocart(10,8)">Add to Cart</a>
+            
+            <a class="btn btn-success"  onclick="removefromcart(10,8)">Remove </a>
+
+        </div>
+        </div>
+
+
+    
+  </div>
+</section> 
+
+
+
+
+
+
+
+
+
+
+ <script>
+
+
+
+
+   let totalbill=[0,0,0,0,0,0,0,0,0]
+   let nameOfMenu=['Chips','Chulbule','Cold Drink','Milk','Curd','Biscuit','BarOne','Coffee','Tea']
+   let toatalbadge=[0,0,0,0,0,0,0,0,0]
+ 
+  
+   function addtocart(pricee,ind){
+   
+
+
+   document.getElementById("checkoutbutton").style.display="block";
+totalbill[ind]+=pricee;
+toatalbadge[ind]+=1
+console.log(toatalbadge);
+
+var price=0;
+var badge=0;
+for (let i = 0; i < totalbill.length; i++) {
+   price += totalbill[i];
+   badge+=toatalbadge[i];
+}
+console.log(badge);
+
+console.log(totalbill)
+console.log(price)
+// badge+=1;
+document.getElementById('jj').innerHTML=price;
+document.getElementById('badge').innerHTML=badge;
+   
+   // lllllllllllllllllllllllllllllLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL
+
+
+
+   var aaj=0;
+ console.log(aaj);
+ 
+ 
+ var lis = document.querySelectorAll('#lovetoz li');
+ 
+ for(var jj=0; li=lis[jj]; jj++) {
+     li.parentNode.removeChild(li);
+ }
+ 
+
+  
+  let listElement = document.getElementById('lovetoz');
+  let numberOfListItems = totalbill.length;
+  let listItem;
+   let i;
+
+
+   for (i = 0; i < numberOfListItems; i++) {
+     
+       if (totalbill[i]!=0){
+     listItem = document.createElement('li');
+
+       listItem.innerHTML =nameOfMenu[i] +" : ₹" + totalbill[i];
+    
+       listElement.appendChild(listItem);
+     
+   }
+ }
+
+   for (let ia = 0; ia < totalbill.length; ia++) {
+if (totalbill[ia]!=0){
+ document.getElementById("lovetoz").style.display="block";
+ document.getElementById("cardisempty").style.display="none";
+
+ console.log("working");
+ break;
+}
+else{
+ document.getElementById("lovetoz").style.display="none";
+ document.getElementById("cardisempty").style.display="block";
+}
+}
+
+ }
+ function removefromcart(pricee,ind){
+   
+
+toatalbadge[ind]-=1;
+   totalbill[ind]-=pricee;
+   if(toatalbadge[ind]<=0){
+     toatalbadge[ind]=0;
+   }
+   if(totalbill[ind]<=0){
+     totalbill[ind]=0;
+   }
+   price=0;
+   badge=0;
+   for (let i = 0; i < totalbill.length; i++) {
+price+=totalbill[i];
+badge+=toatalbadge[i];
+    console.log(totalbill)
+    console.log(price)
+   
+
+
+    
+}
+
+document.getElementById('jj').innerHTML=price;
+document.getElementById('badge').innerHTML=badge;
+   
+   
+
+
+// Remove bill list from cart
+var aaj=0;
+ console.log(aaj);
+ // var lis = document.querySelectorAll('#lovetoz li');
+ 
+ // for(var jj=0; li=lis[jj]; jj++) {
+ //     li.parentNode.removeChild(li);
+ // }
+ 
+ 
+ var lis = document.querySelectorAll('#lovetoz li');
+ 
+ for(var jj=0; li=lis[jj]; jj++) {
+     li.parentNode.removeChild(li);
+ }
+ 
+
+  
+  let listElement = document.getElementById('lovetoz');
+  let numberOfListItems = totalbill.length;
+  let listItem;
+   let i;
+
+
+   for (i = 0; i < numberOfListItems; i++) {
+     
+       if (totalbill[i]!=0){
+     listItem = document.createElement('li');
+
+       listItem.innerHTML =nameOfMenu[i] +" : ₹" + totalbill[i];
+    
+       listElement.appendChild(listItem);
+     
+   }
+ }
+
+  
+//    let listElement = document.getElementById('lovetoz');
+ 
+
+//    let numberOfListItems = totalbill.length;
+//    let listItem;
+//     let i;
+// console.log(totalbill);
+// console.log(totalbill[0]);
+
+//     for (i = 0; i < numberOfListItems; ++i) {
+//         listItem = document.createElement('li');
+
+//         listItem.innerHTML =nameOfMenu[i] +" : ₹" + totalbill[i];
+//         listElement.appendChild(listItem);
+       
+//     }
+
+
+   for (let ia = 0; ia < totalbill.length; ia++) {
+if (totalbill[ia]!=0){
+ document.getElementById("lovetoz").style.display="block";
+ document.getElementById("cardisempty").style.display="none";
+ console.log("working");
+ break;
+}
+else{
+ document.getElementById("lovetoz").style.display="none";
+ 
+ document.getElementById("cardisempty").style.display="block";
+ console.log("balabalabala")
+}
+}
+ }
+
+ </script>
+
+  <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Alert Message</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         Confirm Your Order!!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"> <a href="payment3.html" style="text-decoration: none; color: white;">Confirm</a>  </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+ <!-- Bootstrap CDN links -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Message Box</title>
+	 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body,html{
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			font-family: arial;
+		}
+
+		h1{
+			font-size: 70px;
+			text-transform: uppercase;
+			margin: 0;
+			color: red;
+		}
+
+		.banner-img{
+			background-image: url(https://cache.careers360.mobi/media/presets/720X480/colleges/social-media/media-gallery/247/2018/4/25/Chitkara-University-Patiala-2PB-Campus.jpg);
+			background-size: cover;
+			background-position: center center;
+			height: 100%;
+			filter: blur(5px);
+		}
+		.banner-text{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			z-index: 5;
+			width: 45%;
+			padding: 40px 0;
+			text-align: center;
+			border-top-left-radius: 70px;
+			border-bottom-right-radius: 70px;
+			background-color: rgba(0,0,0,0.3);
+			font-weight: bold;
+			border:10px inset #fff;
+
+		}
+
+	.banner-text p{
+		padding: 0 8%;
+		font-family: merienda;
+		font-size: 2rem;
+		color: white;
+
+	}
+	.bttn{
+		position: absolute;
+		z-index: 1;
+		margin-top: 15px;
+		margin-left: 1370px;
+		font-size: 1.5rem;
+		font-weight: 500;
+		background-color: peachpuff;
+		color: brown;
+		font-family: 'Ubuntu', sans-serif;
+	    cursor: pointer;
+	    text-decoration: none;
+	    outline: none;
+	    text-transform: uppercase;
+	    display: inline-block;
+	    padding: ;
+	    border-radius: 50px;
+
+
+	}
+	.bttn:hover{
+		background-color: mintcream;
+	}
+	.bttn a{
+		text-decoration: none;
+	}	
+	</style>
+</head>
+<body>
+	<button type="button" class="bttn"><a href="secondPage.html">Main Menu</a></button>
+	 <div class="banner-img"></div>
+	 <div class="banner-text">
+	 	<h1>Thanks for Ordering</h1>
+	 	<p>Collect your Order from Billing Area</p>
+	 </div>
+
+</body>
+</html>

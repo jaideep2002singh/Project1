@@ -1,0 +1,157 @@
+
+<!Doctype html>
+<html>
+    <head>
+        <style>
+            #google{
+                font-family: 'PT Serif', serif;
+            }
+        </style>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <link rel = "stylesheet" href = "style4.css">
+        <link rel = "stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">  
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <title>Circle One Index</title>
+    </head>
+    <body>
+         <!-- auto popup -->
+        <div class="popup">
+            <div class="contentBox">
+                <div class="close"></div>
+                <div class="imgBx">
+                    <img src="burgerPn.png">
+                </div>
+                <div class="content">
+                   <div>
+                        <h3>Special Offer</h3>
+                    <h2>25<sup>%</sup><span> Off on Burger </span></h2>
+                    <p>Get ready to eat on August 10 as we are going to avail offers.</p>
+                    <a href="circle1Menu.html">Get The Deal</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- Automatic Show popup after 2 sec -->
+        <script>
+            const popup = document.querySelector('.popup');
+            const close = document.querySelector('.close');
+
+
+          window.onload = function(){
+            setTimeout(function(){
+                popup.style.display = "block";
+                //add some time delay to show popup
+            }, 5000)
+          }
+          close.addEventListener('click', () => {
+             popup.style.display = "none";
+          })
+
+        </script>
+
+
+
+
+
+
+        <nav class = "navbar">
+            <div class = "navbar-container navbar-container">
+              
+                    <ul class="menu-items">
+                        <li><a href="#showcase">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#food">Category</a></li>
+                        <button type="button" class="exit"><a href="login.html" style="color: white;">Back To Login</a></button>
+                    </ul>
+                    <a href="secondPage.html">  <i class="fas fa-home fa-customize"></i> </a>
+                    <img src="circleSide.png" class="circleSide">
+                    <h1 class="logo" id="google">Circle 1 Online</h1>
+            </div>
+        </nav>
+
+
+        <section class = "showcase-area" id="showcase">
+        </section>
+
+      
+        <section id = "about">
+            <div class = "about-wrapper container">
+                <div class = "about-text">
+                    <p class="small">About Us</p>
+                    <h2 id="google">Circle 1 Chitkara University </h2>
+                    <p>Circle 1 Chitkara University has been serving fresh food to not only the students but the faculty members also. Everyday a Hygiene inspection is conducted to maintain the quality of food and with the help of super chefs the taste is also maintained. Cleanliness and Hygiene are the main priorities of the Circle 1 team and taste also. </p>
+                </div>
+                <div class = "about-img">
+                    <img src="Circle1.jpg" alt="About Us">
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="food">
+             <h2>Menu</h2>
+             <div class="food-container container">
+                 <div class="food-type Indian">
+                     <div class="img-container">
+                         <img src="CircleMenu2.jpg" alt="">
+                         <div class="img-content">
+                             <h3>Circle 1 Menu</h3>
+                             <a href="circle1Menu.html
+                             " class="btn btn-primary" target="_blank">Go To Menu</a>
+                         </div>  
+                     </div>
+                 </div>
+                 
+               
+             </div>
+        </section>
+
+
+
+        
+
+       
+
+
+
+   
+        
+     
+         
+
+ 
+  <!--- ############ for smooth scrolling ########### --->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+     $(document).ready(function(){
+    
+     $("a").on('click', function(event) {
+
+    if (this.hash !== "") {
+
+      event.preventDefault();
+      var hash = this.hash;
+
+      
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+
+
+</body>
+</html>
